@@ -7,11 +7,10 @@
 
 /* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #2c0042; /* Roxo escuro */
     color: white;
-    padding: 0 20px;
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* Cabeçalho */
@@ -23,18 +22,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    animation: changeColor 5s infinite alternate;
 }
 
 header .logo h1 {
     font-size: 48px;
     letter-spacing: 5px;
-    animation: glow 1.5s infinite alternate;
-}
-
-header .logo p {
-    font-size: 16px;
-    letter-spacing: 2px;
+    color: #fff;
 }
 
 header nav ul {
@@ -53,67 +46,53 @@ header nav ul li a {
     font-size: 18px;
 }
 
-/* Seção do banner */
-.banner {
+/* Seção Home */
+.home {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 0, 255, 0.3)), url('background.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
     position: relative;
-    background-color: #6f0077;
-    padding: 40px;
-    text-align: center;
-    margin-bottom: 40px;
-    animation: changeColor 5s infinite alternate;
+    z-index: 1;
+    animation: silkEffect 5s infinite alternate;
 }
 
-.banner h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    animation: glow 1.5s infinite alternate;
+.home .content h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-.banner p {
-    font-size: 20px;
-}
-
-/* Sobre a empresa */
-.sobre {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #5f0067;
-    animation: changeColor 5s infinite alternate;
-}
-
-.sobre h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    animation: glow 1.5s infinite alternate;
-}
-
-.sobre p {
+.home .content p {
     font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
+    color: #fff;
 }
 
 /* Produtos */
 .produtos {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 60px 20px;
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .produtos h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    animation: glow 1.5s infinite alternate;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
 }
 
 .produto {
     display: inline-block;
+    width: calc(50% - 40px); 
     margin: 20px;
-    background-color: #7f0088;
-    border-radius: 8px;
     padding: 20px;
-    width: calc(50% - 40px); /* Duas colunas em telas maiores */
+    background: #7f0088;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: changeColor 5s infinite alternate;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto:hover {
+    transform: scale(1.05);
 }
 
 .produto img {
@@ -128,7 +107,6 @@ header nav ul li a {
 
 .produto p {
     font-size: 16px;
-    margin: 10px 0;
 }
 
 .produto button {
@@ -138,24 +116,22 @@ header nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
 }
 
 .produto button:hover {
     background-color: #f1f1f1;
-    transform: scale(1.1);
 }
 
-/* Galeria de Estilos */
+/* Galeria */
 .galeria {
+    padding: 60px 20px;
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .galeria h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    animation: glow 1.5s infinite alternate;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
 }
 
 .galeria-container {
@@ -169,7 +145,6 @@ header nav ul li a {
     height: 250px;
     overflow: hidden;
     border-radius: 8px;
-    animation: changeColor 5s infinite alternate;
 }
 
 .galeria-container .imagem img {
@@ -181,31 +156,24 @@ header nav ul li a {
 /* Contato */
 .contato {
     background-color: #5f0067;
-    padding: 40px;
+    padding: 60px 20px;
     text-align: center;
-    animation: changeColor 5s infinite alternate;
 }
 
 .contato h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
-    animation: glow 1.5s infinite alternate;
-}
-
-.contato form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
+    color: #fff;
 }
 
 .contato input,
 .contato textarea {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 10px;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 .contato button {
@@ -227,57 +195,23 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    animation: changeColor 5s infinite alternate;
+    font-size: 14px;
 }
 
 /* Animações */
-@keyframes glow {
+@keyframes silkEffect {
     0% {
-        text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
-    }
-    100% {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
-    }
-}
-
-@keyframes changeColor {
-    0% {
-        background-color: #6f0077;
-        color: #fff;
-    }
-    25% {
-        background-color: #5f0067;
-        color: #fff;
+        background: linear-gradient(135deg, rgba(255, 0, 255, 0.1), rgba(255, 255, 255, 0.3));
     }
     50% {
-        background-color: #7f0088;
-        color: #fff;
-    }
-    75% {
-        background-color: #8f0098;
-        color: #fff;
+        background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
     }
     100% {
-        background-color: #6f0077;
-        color: #fff;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 0, 255, 0.3));
     }
 }
 
-/* Responsividade para telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
-    .banner h2 {
-        font-size: 28px;
-    }
-
-    .banner p {
-        font-size: 16px;
-    }
-
-    .produtos h2 {
-        font-size: 28px;
-    }
-
     .produto {
-        width: calc(100% - 40px); /* Uma coluna em telas menores */
-    }
-}
+        width: calc(100% - 40px);
