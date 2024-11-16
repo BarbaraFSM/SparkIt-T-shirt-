@@ -4,93 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SparkIt - Camisas Personalizadas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>SparkIt</h1>
-            <p>Estilo que brilha!</p>
+            <p>Moda urbana que brilha como você</p>
         </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="banner" id="home">
-        <div class="overlay"></div>
-        <h2>Camisas Personalizadas para Você</h2>
-        <p>Explore nossa coleção e descubra o estilo que é a sua cara.</p>
+    <section id="home" class="home">
+        <div class="content">
+            <h2>Bem-vindo à SparkIt</h2>
+            <p>Designs exclusivos e únicos para você se destacar.</p>
+        </div>
     </section>
 
-    <section class="sobre" id="sobre">
-        <h2>Sobre a SparkIt</h2>
-        <p>A SparkIt é uma loja de camisas personalizadas que combina estilo urbano, tecnologia e originalidade. Criada por um casal apaixonado por moda e TI, nossa missão é oferecer produtos únicos para pessoas que buscam se expressar com autenticidade. Cada camisa é feita com materiais de alta qualidade e design exclusivo.</p>
-    </section>
-
-    <section class="produtos" id="produtos">
-        <h2>Nossos Produtos</h2>
+    <section id="produtos" class="produtos">
+        <h2>Confira Nossos Produtos</h2>
         <div class="produto">
             <img src="camisa1.jpg" alt="Camisa 1">
-            <h3>Camisa Casual</h3>
-            <p>Descrição breve da camisa.</p>
-            <button>Comprar Agora</button>
+            <h3>Camisa Estilo Urbano</h3>
+            <p>Design exclusivo que mistura arte e moda.</p>
+            <button>Comprar</button>
         </div>
         <div class="produto">
             <img src="camisa2.jpg" alt="Camisa 2">
-            <h3>Camisa Estilosa</h3>
-            <p>Descrição breve da camisa.</p>
-            <button>Comprar Agora</button>
-        </div>
-        <!-- Adicionando mais produtos -->
-        <div class="produto">
-            <img src="camisa3.jpg" alt="Camisa 3">
-            <h3>Camisa Esportiva</h3>
-            <p>Camisa ideal para quem curte esportes e conforto.</p>
-            <button>Comprar Agora</button>
-        </div>
-        <div class="produto">
-            <img src="camisa4.jpg" alt="Camisa 4">
-            <h3>Camisa Personalizada</h3>
-            <p>Peça única para quem busca exclusividade.</p>
-            <button>Comprar Agora</button>
+            <h3>Camisa Tech</h3>
+            <p>Design futurista e tecnológico para os apaixonados por inovação.</p>
+            <button>Comprar</button>
         </div>
     </section>
 
-    <section class="galeria">
+    <section id="galeria" class="galeria">
         <h2>Galeria de Estilos</h2>
         <div class="galeria-container">
             <div class="imagem">
-                <img src="camisa5.jpg" alt="Camisa 5">
+                <img src="galeria1.jpg" alt="Galeria 1">
             </div>
             <div class="imagem">
-                <img src="camisa6.jpg" alt="Camisa 6">
-            </div>
-            <div class="imagem">
-                <img src="camisa7.jpg" alt="Camisa 7">
+                <img src="galeria2.jpg" alt="Galeria 2">
             </div>
         </div>
     </section>
 
-    <section class="contato" id="contato">
+    <section id="contato" class="contato">
         <h2>Entre em Contato</h2>
-        <form action="#">
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu E-mail" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <textarea placeholder="Sua mensagem" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 SparkIt. Todos os direitos reservados.</p>
-        </div>
+        <p>&copy; 2024 SparkIt | Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
