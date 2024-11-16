@@ -11,17 +11,30 @@ body {
     background-color: #2c0042; /* Roxo escuro */
     color: white;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #5f0067; /* Roxo mais claro */
+    background-color: #5f0067;
     padding: 20px;
     text-align: center;
     border-bottom: 3px solid #fff;
     position: sticky;
     top: 0;
     z-index: 100;
+    animation: changeColor 5s infinite alternate;
+}
+
+header .logo h1 {
+    font-size: 48px;
+    letter-spacing: 5px;
+    animation: glow 1.5s infinite alternate;
+}
+
+header .logo p {
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
 header nav ul {
@@ -47,11 +60,13 @@ header nav ul li a {
     padding: 40px;
     text-align: center;
     margin-bottom: 40px;
+    animation: changeColor 5s infinite alternate;
 }
 
 .banner h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
 }
 
 .banner p {
@@ -63,11 +78,13 @@ header nav ul li a {
     text-align: center;
     padding: 40px 0;
     background-color: #5f0067;
+    animation: changeColor 5s infinite alternate;
 }
 
 .sobre h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
 }
 
 .sobre p {
@@ -85,6 +102,7 @@ header nav ul li a {
 .produtos h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
 }
 
 .produto {
@@ -95,6 +113,7 @@ header nav ul li a {
     padding: 20px;
     width: calc(50% - 40px); /* Duas colunas em telas maiores */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: changeColor 5s infinite alternate;
 }
 
 .produto img {
@@ -119,10 +138,12 @@ header nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .produto button:hover {
     background-color: #f1f1f1;
+    transform: scale(1.1);
 }
 
 /* Galeria de Estilos */
@@ -134,6 +155,7 @@ header nav ul li a {
 .galeria h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
 }
 
 .galeria-container {
@@ -147,6 +169,7 @@ header nav ul li a {
     height: 250px;
     overflow: hidden;
     border-radius: 8px;
+    animation: changeColor 5s infinite alternate;
 }
 
 .galeria-container .imagem img {
@@ -160,11 +183,13 @@ header nav ul li a {
     background-color: #5f0067;
     padding: 40px;
     text-align: center;
+    animation: changeColor 5s infinite alternate;
 }
 
 .contato h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    animation: glow 1.5s infinite alternate;
 }
 
 .contato form {
@@ -202,6 +227,40 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    animation: changeColor 5s infinite alternate;
+}
+
+/* Animações */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #6f0077;
+        color: #fff;
+    }
+    25% {
+        background-color: #5f0067;
+        color: #fff;
+    }
+    50% {
+        background-color: #7f0088;
+        color: #fff;
+    }
+    75% {
+        background-color: #8f0098;
+        color: #fff;
+    }
+    100% {
+        background-color: #6f0077;
+        color: #fff;
+    }
 }
 
 /* Responsividade para telas menores */
@@ -216,4 +275,9 @@ footer {
 
     .produtos h2 {
         font-size: 28px;
-   
+    }
+
+    .produto {
+        width: calc(100% - 40px); /* Uma coluna em telas menores */
+    }
+}
